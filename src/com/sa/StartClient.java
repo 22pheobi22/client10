@@ -36,12 +36,12 @@ import com.sa.transport.ClientConfigs;
 public class StartClient {
 	private static int count = 50;
 	private static List<String> roomIds = Arrays.asList(
-			"房间50","房间51","房间52","房间53","房间54","房间55","房间56","房间57","房间58","房间59",
-			"房间60","房间61","房间62","房间63","房间64","房间65","房间66","房间67","房间68","房间69",
-			"房间70","房间71","房间72","房间73","房间74","房间75","房间76","房间77","房间78","房间79",
-			"房间80","房间81","房间82","房间83","房间84","房间85","房间86","房间87","房间88","房间89",
-			"房间90","房间91","房间92","房间93","房间94","房间95","房间96","房间97","房间98","房间99");
-	
+			"房间150","房间151","房间152","房间153","房间154","房间155","房间156","房间157","房间158","房间159",
+			"房间160","房间161","房间162","房间163","房间164","房间165","房间166","房间167","房间168","房间169",
+			"房间170","房间171","房间172","房间173","房间174","房间175","房间176","房间177","房间178","房间179",
+			"房间180","房间181","房间182","房间183","房间184","房间185","房间186","房间187","房间188","房间189",
+			"房间190","房间191","房间192","房间193","房间194","房间195","房间196","房间197","房间198","房间199");
+
 	private static Map<String,String> map = new HashMap<>();
 
 	private static List<String> menuList = Arrays.asList(
@@ -128,7 +128,7 @@ public class StartClient {
 		 //获取当前时间
       LocalDateTime nowTime= LocalDateTime.now();
       //自定义时间
-      LocalDateTime endTime = LocalDateTime.of(2020, 02, 27, 16, 00, 00);
+      LocalDateTime endTime = LocalDateTime.of(2020, 02, 27, 16, 50, 00);
       //比较   现在的时间 和 设定的时候  相等  返回类型是Boolean类型
 		return nowTime.equals(endTime);
 	}
@@ -136,7 +136,7 @@ public class StartClient {
 		 //获取当前时间
      LocalDateTime nowTime= LocalDateTime.now();
      //自定义时间
-     LocalDateTime endTime = LocalDateTime.of(2020, 02, 27, 16, 20, 00);
+     LocalDateTime endTime = LocalDateTime.of(2020, 02, 27, 17, 00, 00);
      //比较   现在的时间 和 设定的时候  相等  返回类型是Boolean类型
 		return nowTime.equals(endTime);
 	}
