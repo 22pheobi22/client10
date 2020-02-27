@@ -126,18 +126,27 @@ public class StartClient {
 	}*/
 	private static boolean com1(){
 		 //获取当前时间
-      LocalDateTime nowTime= LocalDateTime.now();
-      //自定义时间
-      LocalDateTime endTime = LocalDateTime.of(2020, 02, 27, 16, 50, 00);
-      //比较   现在的时间 和 设定的时候  相等  返回类型是Boolean类型
+     LocalDateTime nowTime= LocalDateTime.now();
+     //自定义时间
+     LocalDateTime endTime = LocalDateTime.of(2020, 02, 27, 17, 30, 00);
+     //比较   现在的时间 和 设定的时候  相等  返回类型是Boolean类型
 		return nowTime.equals(endTime);
 	}
 	private static boolean com2(){
 		 //获取当前时间
-     LocalDateTime nowTime= LocalDateTime.now();
-     //自定义时间
-     LocalDateTime endTime = LocalDateTime.of(2020, 02, 27, 17, 00, 00);
-     //比较   现在的时间 和 设定的时候  相等  返回类型是Boolean类型
+    LocalDateTime nowTime= LocalDateTime.now();
+    //自定义时间
+    LocalDateTime endTime = LocalDateTime.of(2020, 02, 27, 17, 40, 00);
+    //比较   现在的时间 和 设定的时候  相等  返回类型是Boolean类型
+		return nowTime.equals(endTime);
+	}
+	
+	private static boolean com3(){
+		 //获取当前时间
+   LocalDateTime nowTime= LocalDateTime.now();
+   //自定义时间
+   LocalDateTime endTime = LocalDateTime.of(2020, 02, 27, 17, 50, 00);
+   //比较   现在的时间 和 设定的时候  相等  返回类型是Boolean类型
 		return nowTime.equals(endTime);
 	}
 	private static void functionProcessing(String menu, Scanner scan) {
@@ -173,6 +182,12 @@ public class StartClient {
 						updateShareMap.put(4, "upd");
 						serverRequestbShareUpd.setOptions(updateShareMap);
 						serverRequestbShareUpd.execPacket();
+					}
+				}
+				if(com3()){
+					for (Entry<String, String> str : map.entrySet()) {
+						new Thread(new ChatClient(ClientConfigs.REMOTE_SERVER_IP, ClientConfigs.REMOTE_SERVER_PORT, str.getKey(),str.getValue())).start();
+						//new EnThread().start();
 					}
 				}
 			}
