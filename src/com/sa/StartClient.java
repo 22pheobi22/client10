@@ -74,127 +74,22 @@ public class StartClient {
 		scan.close();
 	}
 
-	/*private static void functionProcessing(String menu, Scanner scan) {
+	private static void functionProcessing(String menu, Scanner scan) {
 		switch (menu) {
 		
 		case "1"://登录
-			try {
 				try {
 					Thread.sleep(83000);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				Thread.sleep(83000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			for (Entry<String, String> str : map.entrySet()) {
 				new Thread(new ChatClient(ClientConfigs.REMOTE_SERVER_IP, ClientConfigs.REMOTE_SERVER_PORT, str.getKey(),str.getValue())).start();
 			}
 			break;
 		case "10": // 更新共享
 			try {
-				Thread.sleep(38000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			for (Entry<String, String> str : map.entrySet()) {
-				
-				ServerRequestbShareUpd serverRequestbShareUpd = new ServerRequestbShareUpd();
-				serverRequestbShareUpd.setFromUserId(str.getValue());
-				serverRequestbShareUpd.setRoomId(str.getKey());
-				serverRequestbShareUpd.setTransactionId(15724);
-				serverRequestbShareUpd.setStatus(0);
-				TreeMap<Integer,Object> updateShareMap = new TreeMap<>();
-				updateShareMap.put(1, "starcount");
-				updateShareMap.put(2, str.getValue()+"{'20147076':'1','20147078':'0','20147079':'0','20147080':'80','20147081':'81','20147082':'82'}");
-				updateShareMap.put(3, "1");
-				updateShareMap.put(4, "upd");
-				serverRequestbShareUpd.setOptions(updateShareMap);
-				serverRequestbShareUpd.execPacket();
-			}
-			
-			break;	
-		default:
-			System.err.println("无此功能");
-			break;
-
-		}
-	}*/
-	private static boolean com1(){
-		 //获取当前时间
-     LocalDateTime nowTime= LocalDateTime.now();
-     //自定义时间
-     LocalDateTime endTime = LocalDateTime.of(2020, 02, 27, 17, 30, 00);
-     //比较   现在的时间 和 设定的时候  相等  返回类型是Boolean类型
-		return nowTime.equals(endTime);
-	}
-	private static boolean com2(){
-		 //获取当前时间
-    LocalDateTime nowTime= LocalDateTime.now();
-    //自定义时间
-    LocalDateTime endTime = LocalDateTime.of(2020, 02, 27, 17, 40, 00);
-    //比较   现在的时间 和 设定的时候  相等  返回类型是Boolean类型
-		return nowTime.equals(endTime);
-	}
-	
-	private static boolean com3(){
-		 //获取当前时间
-   LocalDateTime nowTime= LocalDateTime.now();
-   //自定义时间
-   LocalDateTime endTime = LocalDateTime.of(2020, 02, 27, 17, 50, 00);
-   //比较   现在的时间 和 设定的时候  相等  返回类型是Boolean类型
-		return nowTime.equals(endTime);
-	}
-	private static void functionProcessing(String menu, Scanner scan) {
-		switch (menu) {
-		
-		case "1"://登录
-			/*try {
-				Thread.sleep(89000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}*/
-			while(true){
-				
-				if(com1()){
-					for (Entry<String, String> str : map.entrySet()) {
-						new Thread(new ChatClient(ClientConfigs.REMOTE_SERVER_IP, ClientConfigs.REMOTE_SERVER_PORT, str.getKey(),str.getValue())).start();
-						//new EnThread().start();
-					}
-				}
-				if(com2()){
-					for (Entry<String, String> str : map.entrySet()) {
-						
-						ServerRequestbShareUpd serverRequestbShareUpd = new ServerRequestbShareUpd();
-						serverRequestbShareUpd.setFromUserId(str.getValue());
-						serverRequestbShareUpd.setRoomId(str.getKey());
-						serverRequestbShareUpd.setTransactionId(15724);
-						serverRequestbShareUpd.setStatus(0);
-						TreeMap<Integer,Object> updateShareMap = new TreeMap<>();
-						updateShareMap.put(1, "starcount");
-						updateShareMap.put(2, str.getValue()+"{'20147076':'1','20147078':'0','20147079':'0','20147080':'80','20147081':'81','20147082':'82'}");
-						updateShareMap.put(3, "1");
-						updateShareMap.put(4, "upd");
-						serverRequestbShareUpd.setOptions(updateShareMap);
-						serverRequestbShareUpd.execPacket();
-					}
-				}
-				if(com3()){
-					for (Entry<String, String> str : map.entrySet()) {
-						new Thread(new ChatClient(ClientConfigs.REMOTE_SERVER_IP, ClientConfigs.REMOTE_SERVER_PORT, str.getKey(),str.getValue())).start();
-						//new EnThread().start();
-					}
-				}
-			}
-			//break;
-		case "10": // 更新共享
-			try {
-				Thread.sleep(89000);
+				Thread.sleep(83000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
